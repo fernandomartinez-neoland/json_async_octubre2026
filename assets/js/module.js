@@ -33,15 +33,15 @@ console.log(objeto.textura);
 
 const resultado = document.getElementById("result");
 const img = document.createElement("img");
-
 const esperar = (ms) => new Promise(resolve=>setTimeout(resolve, ms));
 
 for (let i =1; i <= 151; i++) {
   const pokeapi = fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((response) => {
+  .then((response) => {
+    return response.json();
+  })
+  .then((response) => {
+      resultado.innerHTML+=`<img src="${response.sprites.other['official-artwork'].front_shiny}">`
       console.log(response.sprites.other["official-artwork"].front_shiny);
       img.src = response.sprites.other["official-artwork"].front_shiny;
       resultado.appendChild(img);
