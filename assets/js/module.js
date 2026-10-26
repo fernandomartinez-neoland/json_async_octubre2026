@@ -28,7 +28,7 @@ console.log(objeto.textura);
 
 // // TRY/CATCH, el try intenta ejecutar todo lo que esta dentro y si algo sale mal se salta todo y va directo al catch, para evitar que el codigo se rompa y controlar el error, parecido a la forma en la que usamos el "then/catch"
 // intento(pelota)
-
+ 
 // consulta FETCH
 
 const resultado = document.getElementById("result");
